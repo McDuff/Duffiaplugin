@@ -17,16 +17,22 @@ Optional
 
 Features
 - Login MOTD with config
-- Logout location tracker
-- PvP damage notifier
+- Last Logout location tracking (flatfile)
+- PVP Death tracking (flatfile)
 - Block break notifier
 - Block place notifier
+- command listener (loaded with /spawn command)
 
 Todo
-- PvP Damage statistics
-- Death tracking
 - player help (AI)
-- Block Statistics
+- Block Statistics (sql)
+- Player region protection system
+- permissions
+- economy (PVP and Gold)
+- admin commands
+- upgrade Last Logout location tracking to sql
+- upgrade PVP Death tracking to sql
+
 
 Borrowed code
-- mini (thank you 
+- mini (thank you Nijiko Yonskai (@nijikokun) <nijikokun@gmail.com>)

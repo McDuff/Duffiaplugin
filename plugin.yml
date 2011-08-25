@@ -1,5 +1,10 @@
 name: DuffiaPlugin
-main: me.Mc_Duff.DuffiaPlugin.DuffiaPlugin
+main: com.Mc_Duff.DuffiaPlugin.DuffiaPlugin
 version: 0.1
 authors: [Mc_Duff]
 
+commands:
+   spawn:
+      description: Teleport self to spawn.
+      usage:
+           /<command>

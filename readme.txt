@@ -1,4 +1,4 @@
-[MISC] Duffiaplugin v0.1 - IN Development [1060]
+[MISC] Duffiaplugin v0.2 - IN Development [1060]
 
 This plugin is me learning how to make my own plugins for our server, 
 to do exactly what we want them to do a remove the need to manage 
@@ -7,7 +7,7 @@ multiple plugin files.
 
 Plugin:Duffiaplugin
 
-version: 0.1
+version: 0.2
 
 REQUIRES
 - No dependencies

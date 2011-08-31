@@ -11,14 +11,15 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 import com.Mc_Duff.mini.Arguments;
 
+//players listener
 public class players extends PlayerListener{
-	
+	//load in our plugin so it shares code from duffiaplugin.java
 	DuffiaPlugin plugin;
 	
 	public players(DuffiaPlugin plugin) {
 		this.plugin = plugin;
 	}
-	
+	//catches PLAYER_JOIN event and does stuff
 	@Override
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
@@ -39,7 +40,7 @@ public class players extends PlayerListener{
 			}
 			
 			if(pvpEntry != null){
-				String pvp = "[PVP]Kills:" + pvpEntry.getValue("K")+ " ,Deaths:" + pvpEntry.getValue("D");
+				String pvp = "[PVP]Kills:" + pvpEntry.getValue("K")+ " ,Deaths:" + pvpEntry.getValue("D")+ " ,PVP coins:" + pvpEntry.getValue("PVPCOIN");
 				player.sendMessage(pvp);
 			}
 			else {
@@ -49,13 +50,14 @@ public class players extends PlayerListener{
 			
 		}
 	}
-	
+	//catches PLAYER_QUIT event
 	@Override
 	public void onPlayerQuit(PlayerQuitEvent event) {
 		Player player = event.getPlayer();
 		//stores players login location to a flat file database
 		Location current = player.getLocation();
 		Arguments entry = new Arguments(player.getDisplayName());
+		//converts an int type back into a string for the flatfile entry values
 		entry.setValue("x",String.valueOf((int) current.getX()));
 		entry.setValue("y",String.valueOf((int) current.getY()));
 		entry.setValue("z",String.valueOf((int) current.getZ()));

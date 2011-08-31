@@ -1,6 +1,6 @@
 name: DuffiaPlugin
 main: com.Mc_Duff.DuffiaPlugin.DuffiaPlugin
-version: 0.1
+version: 0.3
 authors: [Mc_Duff]
 
 commands:
@@ -8,3 +8,11 @@ commands:
       description: Teleport self to spawn.
       usage:
            /<command>
+   pvp:
+      description: Check own PVP stats.
+      usage:
+           /<command>
+   buy:
+      description: Spend PVP points.
+      usage:
+           /<command> [args]

@@ -1,7 +1,7 @@
 name: DuffiaPlugin
 main: com.Mc_Duff.DuffiaPlugin.DuffiaPlugin
-version: 0.3
-authors: [Mc_Duff]
+version: 0.4
+authors: [Mc_Duff][Ryukeb]
 
 commands:
    spawn:
@@ -16,3 +16,23 @@ commands:
       description: Spend PVP points.
       usage:
            /<command> [args]
+   money:
+      description: economy acount info
+      usage:
+           /<command> [args]
+   pay:
+      description: economy  pay another player
+      usage:
+           /<command> [args]
+   addmoney:
+      description: economy add money to account (op only)
+      usage:
+           /<command> [args]
+   removemoney:
+      description: economy remove money from account (op only)
+      usage:
+           /<command> [args]
+   startpack:
+      description: basic starter kit
+      usage:
+           /<command>

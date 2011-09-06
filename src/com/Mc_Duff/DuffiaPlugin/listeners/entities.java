@@ -5,7 +5,6 @@ import java.util.Random;
 import com.Mc_Duff.DuffiaPlugin.DuffiaPlugin;
 import com.Mc_Duff.mini.Arguments;
 
-
 import org.bukkit.entity.Chicken;
 import org.bukkit.entity.CreatureType;
 import org.bukkit.entity.Player;
@@ -36,15 +35,18 @@ public class entities extends  EntityListener{
 	    	
 	    	//if the entity hit is a checken randomly spawn something else
 	    	if(e.getEntity() instanceof Chicken && e.getDamager() instanceof Player) {
+	    		//cast entity to player type
 	    		Player damager = (Player)e.getDamager();
 	    		Random randomno = new Random();
-	    		int randomInt = randomno.nextInt(10); 
+	    		int randomInt = randomno.nextInt(100); 
 	    		
-	     		if(randomInt == 7){
+	     		if(randomInt == 69){
 	    			damager.sendMessage("You hit the Killer Chicken of Caerbannog");    		
-	    			//check this....
+	    			//spawns a ghast. But how to change its name or get its ID.
 	    			damager.getWorld().spawnCreature(damager.getLocation(), CreatureType.GHAST);
+	     		
 	     		}
+	     	
 	    	}
 	    	
 	    	//Check to see if the damager and damaged are players by comparing to Player object

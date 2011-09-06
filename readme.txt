@@ -7,7 +7,7 @@ multiple plugin files.
 
 Plugin:Duffiaplugin
 
-version: 0.3
+version: 0.4
 
 REQUIRES
 - No dependencies
@@ -21,21 +21,22 @@ Features
 - PVP Death tracking (flatfile)
 - Block break notifier
 - Block place notifier
-- command listener (/spawn, /buy commands)
+- Command listener (/spawn, /buy commands)
 - PVP economy
 - Fire spread off
 - Creepers no longer damage blocks
+- Gold economy (Flat-File)
+- Kit (no timer currently)
 
 Todo
-- player help (AI)
-- Block Statistics (sql)
+- Permissions
+- Admin commands
+- Add VIP priority login
 - Player region protection system
-- permissions
-- Gold economy
-- admin commands
-- upgrade Last Logout location tracking to sql
-- upgrade PVP Death tracking to sql
-
+- Player help (AI)
+- Block Statistics (sql)
+- Upgrade Last Logout location tracking to sql
+- Upgrade PVP Death tracking to sql
 
 Borrowed code
 - mini (thank you Nijiko Yonskai (@nijikokun) <nijikokun@gmail.com>)

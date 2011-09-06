@@ -65,5 +65,5 @@ public class players extends PlayerListener{
 		plugin.database.addIndex(entry.getKey(), entry);
 		plugin.database.update();
 	}	
-
+	
 }

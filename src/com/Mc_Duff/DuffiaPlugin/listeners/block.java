@@ -23,7 +23,7 @@ public class block extends BlockListener {
 		Block block = event.getBlockPlaced();
 		
 		if(player != null && block != null){
-			String placemessage1 = player.getName() + " placed " + block.getTypeId(); 
+			String placemessage1 = player.getName() + " placed " + block.getType(); 
 			String placemessage2 = "@ X:" + block.getX() + ",Y:" + block.getY()+ ",Z:" + block.getZ();
 			//was trying to check if the player couldn't place the block i.e spawn or protection
 			//this failed needs looking at!!!!!!!!
@@ -40,7 +40,7 @@ public class block extends BlockListener {
 		Block block = event.getBlock();
 			
 		if(player != null && block != null){
-			String breakmessage1 = player.getName() + " broke " + block.getTypeId();
+			String breakmessage1 = player.getName() + " broke " + block.getType();
 			String breakmessage2 = "@ X:" + block.getX() + ",Y:" + block.getY()+ ",Z:" + block.getZ();
 					
 			player.sendMessage(breakmessage1);
@@ -61,6 +61,6 @@ public class block extends BlockListener {
     public void onBlockBurn(BlockBurnEvent event){
     		
     	event.setCancelled(true);
-    	
+
     }
 }

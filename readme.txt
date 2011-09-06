@@ -1,4 +1,4 @@
-[MISC] Duffiaplugin v0.3 - IN Development [1060]
+[MISC] Duffiaplugin v0.4 - IN Development [1060]
 
 This plugin is me learning how to make my own plugins for our server, 
 to do exactly what we want them to do a remove the need to manage 

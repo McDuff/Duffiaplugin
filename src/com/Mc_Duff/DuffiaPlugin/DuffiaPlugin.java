@@ -24,7 +24,7 @@ public class DuffiaPlugin extends JavaPlugin{
 	private PluginDescriptionFile info;
 	private PluginManager pm;
 	private File directory, config;
-	public Mini database, database1, database2;
+	public Mini database, database1, database2, database3;
 	//public final HashMap<Player, ArrayList<Block>> basicusers = new Hashmap;
 	
 	public void onDisable(){ 
@@ -44,6 +44,7 @@ public class DuffiaPlugin extends JavaPlugin{
 		database = new Mini(directory.getPath(), "locations.mini");
 		database1 = new Mini(directory.getPath(), "pvp.mini");
 		database2 = new Mini(directory.getPath(), "economy.mini");
+		database3 = new Mini(directory.getPath(), "kits.mini");
 		//check if directory is present and create new if not
 		if(!directory.exists())
 			directory.mkdirs();

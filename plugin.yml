@@ -1,7 +1,6 @@
 name: DuffiaPlugin
 main: com.Mc_Duff.DuffiaPlugin.DuffiaPlugin
 version: 0.4
-authors: [Mc_Duff][Ryukeb]
 
 commands:
    spawn:

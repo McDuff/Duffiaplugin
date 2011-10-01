@@ -2,14 +2,14 @@ package com.Mc_Duff.DuffiaPlugin.listeners;
 
 import com.Mc_Duff.DuffiaPlugin.DuffiaPlugin;
 
-import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
-import org.bukkit.event.block.BlockBreakEvent;
+//import org.bukkit.block.Block;
+//import org.bukkit.entity.Player;
+//import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockBurnEvent;
 import org.bukkit.event.block.BlockIgniteEvent;
 import org.bukkit.event.block.BlockIgniteEvent.IgniteCause;
 import org.bukkit.event.block.BlockListener;
-import org.bukkit.event.block.BlockPlaceEvent;
+//import org.bukkit.event.block.BlockPlaceEvent;
 
 public class block extends BlockListener {
 	DuffiaPlugin plugin;
@@ -18,7 +18,7 @@ public class block extends BlockListener {
 		this.plugin = plugin;
 	}
 	//captures Block_Place
-	public void onBlockPlace(BlockPlaceEvent event) {
+/*	public void onBlockPlace(BlockPlaceEvent event) {
 		Player player = event.getPlayer();
 		Block block = event.getBlockPlaced();
 		
@@ -47,7 +47,7 @@ public class block extends BlockListener {
 			player.sendMessage(breakmessage2);
 		}
 	}
-	//captures block on fire event
+*/	//captures block on fire event
 	public void onBlockIgnite(BlockIgniteEvent event) {
     	
         if (event.getCause() != IgniteCause.FLINT_AND_STEEL) {

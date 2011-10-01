@@ -29,7 +29,7 @@ public class playercommand {
 		//check command name and ignore case (i.e capitals etc..)
 		if (label.equalsIgnoreCase("spawn")){
 			//create location object and define coords
-			Location spawnloc = new Location(caster.getWorld(),45 ,65,-30,180,0);
+			Location spawnloc = new Location(caster.getWorld(),-288 ,72,324,180,0);
 			caster.teleport(spawnloc);
 			caster.sendMessage(caster.getDisplayName()+ ", you have been returned to Spawn");
 			 /*its a boolean so needs to return true to do the command*/
@@ -179,12 +179,44 @@ public class playercommand {
 		}
 		if(cmd.getName().equalsIgnoreCase("startpack")){
 		
-			ItemStack item1 = new ItemStack(274, 1);
-			ItemStack item2 = new ItemStack(272, 1);
-			ItemStack item3 = new ItemStack(50, 16);
-			PlayerInventory inventory = caster.getInventory();
-			inventory.addItem(new ItemStack[] { item1, item2, item3 });
-			caster.sendMessage("You have been given a starter pack!");
+			long systime = System.currentTimeMillis();
+			Arguments kitentry = plugin.database3.getArguments(caster.getDisplayName());
+			if(kitentry != null){
+			String lasttime = kitentry.getValue("SP");
+			long SPtime = Long.parseLong(lasttime);
+			long timediff = systime - SPtime;
+			long timediffleft = 86400000 - timediff;
+			int minsleft = (int) (timediffleft/60000);
+			if (timediff>=86400000){
+				ItemStack item1 = new ItemStack(274, 1);
+				ItemStack item2 = new ItemStack(272, 1);
+				ItemStack item3 = new ItemStack(50, 16);
+				PlayerInventory inventory = caster.getInventory();
+				inventory.addItem(new ItemStack[] { item1, item2, item3 });
+				caster.sendMessage("You have been given a starter pack!");
+				kitentry.setValue("SP",String.valueOf(systime));
+				plugin.database3.addIndex(kitentry.getKey(), kitentry);
+				plugin.database3.update();
+			}else {
+				caster.sendMessage("You have not waited for 24 hours!");
+				caster.sendMessage("Your startpack can be claimed in " + minsleft + " minutes!");
+			}
+				
+			}
+			else {
+				Arguments kitentry0 = new Arguments(caster.getDisplayName());
+				ItemStack item1 = new ItemStack(274, 1);
+				ItemStack item2 = new ItemStack(272, 1);
+				ItemStack item3 = new ItemStack(50, 16);
+				PlayerInventory inventory = caster.getInventory();
+				inventory.addItem(new ItemStack[] { item1, item2, item3 });
+				caster.sendMessage("You have been given a starter pack!");
+				kitentry0.setValue("SP",String.valueOf(systime));
+				plugin.database3.addIndex(kitentry0.getKey(), kitentry0);
+				plugin.database3.update();
+			}
+			
+
 		}	
 	}
 	

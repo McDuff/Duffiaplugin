@@ -1,13 +1,12 @@
-[MISC] Duffiaplugin v0.3 - IN Development [1060]
+[MISC] Duffiaplugin v0.5 - IN Development [1185]
 
 This plugin is me learning how to make my own plugins for our server, 
 to do exactly what we want them to do a remove the need to manage 
 multiple plugin files.
 
-
 Plugin:Duffiaplugin
 
-version: 0.4
+version: 0.5
 
 REQUIRES
 - No dependencies
@@ -19,24 +18,22 @@ Features
 - Login MOTD with config
 - Last Logout location tracking (flatfile)
 - PVP Death tracking (flatfile)
-- Block break notifier
-- Block place notifier
 - Command listener (/spawn, /buy commands)
 - PVP economy
 - Fire spread off
 - Creepers no longer damage blocks
 - Gold economy (Flat-File)
-- Kit (no timer currently)
+- Kit /startpack (with timer)
 
 Todo
 - Permissions
+- Groups
 - Admin commands
 - Add VIP priority login
 - Player region protection system
 - Player help (AI)
-- Block Statistics (sql)
-- Upgrade Last Logout location tracking to sql
-- Upgrade PVP Death tracking to sql
+- Block Statistics (SQL)
+- Upgrade flatfile to SQL
 
 Borrowed code
-- mini (thank you Nijiko Yonskai (@nijikokun) <nijikokun@gmail.com>)
+- mini (Thank you Nijiko Yonskai (@nijikokun) <nijikokun@gmail.com>)
